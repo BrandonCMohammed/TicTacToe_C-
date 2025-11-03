@@ -1,0 +1,14 @@
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\bin\Debug\net9.0\TikTacToe.exe
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\bin\Debug\net9.0\TikTacToe.deps.json
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\bin\Debug\net9.0\TikTacToe.runtimeconfig.json
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\bin\Debug\net9.0\TikTacToe.dll
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\bin\Debug\net9.0\TikTacToe.pdb
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\TikTacToe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\TikTacToe.AssemblyInfoInputs.cache
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\TikTacToe.AssemblyInfo.cs
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\TikTacToe.csproj.CoreCompileInputs.cache
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\TikTacToe.dll
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\refint\TikTacToe.dll
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\TikTacToe.pdb
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\TikTacToe.genruntimeconfig.cache
+C:\Users\00015403\Desktop\C# projects\TicTacToe\TikTacToe\obj\Debug\net9.0\ref\TikTacToe.dll
