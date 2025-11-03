@@ -29,11 +29,12 @@ namespace TikTacToe
             char player = 'X';
             char[,] grid = new char[3, 3];
             int box = 0;
+            InitGrid(ref grid);
 
 
             while (true)
             {
-                InitGrid(ref grid);
+                drawGrid(ref grid);
                 playerAlternater(turnCounter, ref player);
                 Console.Write("Player " + player + ", select a box (1-9): ");
                 boxPositionChecker(ref box);
@@ -44,16 +45,16 @@ namespace TikTacToe
         }
 
 
-        static void drawGrid()
+        static void drawGrid(ref char[,] grid)
         {
             Console.WriteLine("     |     |     ");
-            Console.WriteLine("     |     |     ");
+            Console.WriteLine("  " + grid[0, 0] + "  |  " + grid[0, 1] + "  |  " + grid[0, 2] + "  ");
             Console.WriteLine("_____|_____|_____");
             Console.WriteLine("     |     |     ");
-            Console.WriteLine("     |     |     ");
+            Console.WriteLine("  " + grid[1, 0] + "  |  " + grid[1, 1] + "  |  " + grid[1, 2] + "  ");
             Console.WriteLine("_____|_____|_____");
             Console.WriteLine("     |     |     ");
-            Console.WriteLine("     |     |     ");
+            Console.WriteLine("  " + grid[2, 0] + "  |  " + grid[2, 1] + "  |  " + grid[2, 2] + "  ");
             Console.WriteLine("     |     |     ");
         }
 
@@ -71,14 +72,15 @@ namespace TikTacToe
 
         static void InitGrid(ref char[,] grid)
         {
-            drawGrid();
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    grid[i, j] = '_';
+                    grid[i, j] = ' ';
                 }
             }
+            
+
         }
 
         static void boxPositionChecker(ref int box)
