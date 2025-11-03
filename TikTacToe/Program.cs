@@ -13,21 +13,7 @@ namespace TikTacToe
         {
 
 
-            while (true)
-            {
-                int turnCounter = 0;
-                char player = 'X';
-                char[,] grid = new char[3, 3];
-                int box = 0;
-                InitGrid(ref grid);
-                playerAlternater(turnCounter, ref player);
-                Console.WriteLine("Player " + player + ", select a box (1-9): ");
-                boxPositionChecker(ref box);
-
-                Console.WriteLine("You selected box: " + box);
-            }
-            // Program.drawGrid();
-            // Game game = new Game();
+            gameLoop();
 
             // game.Start();
             // Console.WriteLine("Welcome to Tic Tac Toe!");
@@ -35,6 +21,26 @@ namespace TikTacToe
 
 
 
+        }
+
+        static void gameLoop()
+        {
+            int turnCounter = 0;
+            char player = 'X';
+            char[,] grid = new char[3, 3];
+            int box = 0;
+
+
+            while (true)
+            {
+                InitGrid(ref grid);
+                playerAlternater(turnCounter, ref player);
+                Console.Write("Player " + player + ", select a box (1-9): ");
+                boxPositionChecker(ref box);
+
+                Console.WriteLine("You selected box: " + box);
+                turnCounter++;
+            }
         }
 
 
@@ -65,6 +71,7 @@ namespace TikTacToe
 
         static void InitGrid(ref char[,] grid)
         {
+            drawGrid();
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
