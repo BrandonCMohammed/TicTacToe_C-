@@ -37,6 +37,7 @@ namespace TikTacToe
                 Console.WriteLine("You selected box: " + box);
                 checkWinCondition(ref grid, ref gameOver);
                 turnCounter++;
+                Console.Clear();
             }
 
             Console.Write("New Game? (y/n): ");
@@ -48,7 +49,9 @@ namespace TikTacToe
             }
             else
             {
-                Console.WriteLine("Thanks for playing!");
+                Console.Write("Thanks for playing!");
+                Console.ReadKey(); // Wait for user input
+
 
             }
 
@@ -229,6 +232,8 @@ namespace TikTacToe
                     drawGrid(ref grid);
                     Console.WriteLine("It's a draw!");
                     gameOver = true;
+                    Console.ReadKey(); // Wait for user input
+                    Console.Clear();
                 }
 
                 for (int i = 0; i < 3; i++)
@@ -236,31 +241,47 @@ namespace TikTacToe
                     // Check rows
                     if (grid[i, 0] == grid[i, 1] && grid[i, 1] == grid[i, 2] && grid[i, 0] != ' ')
                     {
+                        Console.Clear();
                         drawGrid(ref grid);
                         Console.WriteLine("Player " + grid[i, 0] + " wins!");
+                        Console.Write("Press any key to continue...");
+                        Console.ReadKey(); // Wait for user input
+
                         gameOver = true;
                     }
                     // Check columns
                     if (grid[0, i] == grid[1, i] && grid[1, i] == grid[2, i] && grid[0, i] != ' ')
                     {
+                        Console.Clear();
                         drawGrid(ref grid);
                         Console.WriteLine("Player " + grid[0, i] + " wins!");
+                        Console.Write("Press any key to continue...");
+                        Console.ReadKey(); // Wait for user input
+
                         gameOver = true;
 
                     }
 
                     if (grid[0, 0] == grid[1, 1] && grid[1, 1] == grid[2, 2] && grid[0, 0] != ' ')
                     {
+                        Console.Clear();
                         drawGrid(ref grid);
                         Console.WriteLine("Player " + grid[0, 0] + " wins!");
+                        Console.Write("Press any key to continue...");
+                        Console.ReadKey(); // Wait for user input
+
                         gameOver = true;
 
                     }
 
                     if (grid[0, 2] == grid[1, 1] && grid[1, 1] == grid[2, 0] && grid[0, 2] != ' ')
                     {
+                        Console.Clear();
                         drawGrid(ref grid);
                         Console.WriteLine("Player " + grid[0, 2] + " wins!");
+                        Console.Write("Press any key to continue...");
+                        Console.ReadKey(); // Wait for user input
+
                         gameOver = true;
 
                     }
@@ -277,20 +298,20 @@ namespace TikTacToe
 
         }
         static void explainGame()
-            {
-                Console.WriteLine("Welcome to Tic Tac Toe!");
-                Console.WriteLine("Players take turns placing their marks (X or O) on a 3x3 grid.");
-                Console.WriteLine("The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.");
-                Console.WriteLine("If all nine boxes are filled and no player has three in a row, the game ends in a draw.");
-                Console.WriteLine("To make a move, enter a number between 1 and 9 corresponding to the box you want to fill:");
-                Console.WriteLine(" 1 | 2 | 3 ");
-                Console.WriteLine("-----------");
-                Console.WriteLine(" 4 | 5 | 6 ");
-                Console.WriteLine("-----------");
-                Console.WriteLine(" 7 | 8 | 9 ");
-                Console.Write("Let's start the game! (Press any key to continue...)");
-                Console.ReadKey(); // Wait for user input
-                Console.Clear();
-            }
+        {
+            Console.WriteLine("Welcome to Tic Tac Toe!");
+            Console.WriteLine("Players take turns placing their marks (X or O) on a 3x3 grid.");
+            Console.WriteLine("The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.");
+            Console.WriteLine("If all nine boxes are filled and no player has three in a row, the game ends in a draw.");
+            Console.WriteLine("To make a move, enter a number between 1 and 9 corresponding to the box you want to fill:");
+            Console.WriteLine(" 1 | 2 | 3 ");
+            Console.WriteLine("-----------");
+            Console.WriteLine(" 4 | 5 | 6 ");
+            Console.WriteLine("-----------");
+            Console.WriteLine(" 7 | 8 | 9 ");
+            Console.Write("Let's start the game! (Press any key to continue...)");
+            Console.ReadKey(); // Wait for user input
+            Console.Clear();
+        }
     }
 }
