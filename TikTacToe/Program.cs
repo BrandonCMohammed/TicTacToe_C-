@@ -38,7 +38,7 @@ namespace TikTacToe
                 playerAlternater(turnCounter, ref player);
                 Console.Write("Player " + player + ", select a box (1-9): ");
                 boxPositionChecker(ref box);
-
+                inputIntoTheArray(ref grid, player, box);
                 Console.WriteLine("You selected box: " + box);
                 turnCounter++;
             }
@@ -98,9 +98,40 @@ namespace TikTacToe
                     box = Convert.ToInt32(Console.ReadLine());
                 }
             }
+        }
 
-
-
+        static void inputIntoTheArray(ref char[,] grid, char player, int box)
+        {
+            switch (box)
+            {
+                case 1:
+                    grid[0, 0] = player;
+                    break;
+                case 2:
+                    grid[0, 1] = player;
+                    break;
+                case 3:
+                    grid[0, 2] = player;
+                    break;
+                case 4:
+                    grid[1, 0] = player;
+                    break;
+                case 5:
+                    grid[1, 1] = player;
+                    break;
+                case 6:
+                    grid[1, 2] = player;
+                    break;
+                case 7:
+                    grid[2, 0] = player;
+                    break;
+                case 8:
+                    grid[2, 1] = player;
+                    break;
+                case 9:
+                    grid[2, 2] = player;
+                    break;
+            }
         }
     }
 }
